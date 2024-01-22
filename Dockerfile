@@ -1,22 +1,17 @@
-# Use Python 3.9 as the base image
+# Use an ARM compatible Python base image if necessary
 FROM python:3.9
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Install CMake (and other necessary system dependencies if any)
-RUN apt-get update && apt-get install -y cmake
-RUN apt-get update && apt-get install -y nano
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
+# Install CMake and other dependencies
+RUN apt-get update && apt-get install -y cmake nano libgl1-mesa-glx
 
-# Set the DISPLAY environment variable for GUI applications
-ENV DISPLAY=:0
+# Install OpenCV Python (headless version)
+RUN pip install numpy face_recognition opencv-python-headless
 
 # Copy the age-and-gender folder into the container
 COPY age-and-gender ./age-and-gender
-
-# Install required Python packages
-RUN pip install numpy face_recognition opencv-python
 
 # Build and install the age-and-gender repository
 RUN cd age-and-gender && python setup.py install
