@@ -28,7 +28,7 @@ frame_height, frame_width, _ = frame.shape
 frame_center = (frame_width // 2, frame_height // 2)
 start_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 filename = f"results_{start_time}.json"
-output_directory = '/usr/src/app/results'
+output_directory = 'results'
 output_file_path = os.path.join(output_directory, filename)
 os.makedirs(output_directory, exist_ok=True)
 
