@@ -13,11 +13,11 @@ def is_close_to_center(box, frame_center, threshold=100):
 
 # Initialize age and gender prediction
 data = AgeAndGender()
-data.load_shape_predictor('age-and-gender/example/models/shape_predictor_5_face_landmarks.dat')
-data.load_dnn_gender_classifier('age-and-gender/example/models/dnn_gender_classifier_v1.dat')
-data.load_dnn_age_predictor('age-and-gender/example/models/dnn_age_predictor_v1.dat')
+data.load_shape_predictor('models/shape_predictor_5_face_landmarks.dat')
+data.load_dnn_gender_classifier('models/dnn_gender_classifier_v1.dat')
+data.load_dnn_age_predictor('models/dnn_age_predictor_v1.dat')
 
-font = ImageFont.truetype("age-and-gender/example/Acme-Regular.ttf", 20)
+font = ImageFont.truetype("Acme-Regular.ttf", 20)
 
 # Open a handle to the default webcam
 cap = cv2.VideoCapture(0)
