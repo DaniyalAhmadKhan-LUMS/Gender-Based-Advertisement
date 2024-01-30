@@ -27,7 +27,8 @@ gst_pipeline = (
     "appsink"
 )
 # Open a handle to the default webcam
-cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
+# cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
+cap = cv2.VideoCapture(0)
 
 # Get the size of the video frame
 ret, frame = cap.read()
@@ -50,6 +51,7 @@ with open(output_file_path, 'w') as outfile:
     first_entry = True
 
     while True:
+        detected_gender = "none"
         # Capture frame-by-frame
         ret, frame = cap.read()
         if not ret:
@@ -74,6 +76,11 @@ with open(output_file_path, 'w') as outfile:
                 draw = ImageDraw.Draw(img)
 
                 gender = info['gender']['value'].title()
+                if gender == "Male":
+                    detected_gender = "male"
+                elif gender == "Female":
+                    detected_gender = "female"
+                print(gender)
                 gender_percent = int(info['gender']['confidence'])
                 age = info['age']['value']
                 age_percent = int(info['age']['confidence'])
@@ -107,7 +114,8 @@ with open(output_file_path, 'w') as outfile:
 
                 draw.rectangle(shape, outline="red", width=5)
 
-
+        with open("gender_detected.txt", "w") as file:
+            file.write(detected_gender)
 
     outfile.write(']')  # End the JSON array
 
