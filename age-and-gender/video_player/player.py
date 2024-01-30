@@ -41,7 +41,7 @@ class VideoPlayer(QMainWindow):
                 pass
     def check_gender_x(self):
         try:
-            with open("/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/example/gender_detected.txt", "r") as file:
+            with open("../example/gender_detected.txt", "r") as file:
                 gender = file.read().strip()
                 print(gender)
                 if gender in ["male", "female","none"]:  # If a specific gender is detected
@@ -54,10 +54,10 @@ class VideoPlayer(QMainWindow):
     def play_video(self, gender):
         if gender == "none":
             self.generic_video_playing = True
-            self.player.setMedia(QMediaContent(QUrl.fromLocalFile("/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video/generic/video.mp4")))
+            self.player.setMedia(QMediaContent(QUrl.fromLocalFile("/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video_player/video/generic/video.mp4")))
         else:
             self.generic_video_playing = False
-            video_path = "/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video/male/video.mp4" if gender == "male" else "/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video/female/video.mp4"
+            video_path = "/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video_player/video/male/video.mp4" if gender == "male" else "/home/athena/Documents/Upwork/Ad/age-gender/age-and-gender/video_player/video/female/video.mp4"
             self.player.setMedia(QMediaContent(QUrl.fromLocalFile(video_path)))
         self.player.play()
 
