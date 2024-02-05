@@ -27,8 +27,8 @@ gst_pipeline = (
     "appsink"
 )
 # Open a handle to the default webcam
-# cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
+# cap = cv2.VideoCapture(0)
 
 # Get the size of the video frame
 ret, frame = cap.read()
