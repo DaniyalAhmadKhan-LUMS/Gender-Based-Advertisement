@@ -2,7 +2,7 @@
 # Gender Detection on Jetson Nano
 
 The code in this repo uses dlib to extract the facial features of a person and detect thier gender.
-## Requirements: Python3.9, cmake
+## Requirements: Python3.8,9, cmake
 
 To setup the repo on a linux machine clone the repo using `git clone https://github.com/DaniyalAhmadKhan-LUMS/age-gender.git` and run the following commands:
 1) `apt-get update && apt-get install -y cmake nano libgl1-mesa-glx`
