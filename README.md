@@ -6,6 +6,7 @@ This repository hosts a robust solution for real-time gender detection utilizing
 ## Installation
 
 ### Prerequisites
+- Base Image: `https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image`
 - Python 3.9
 - cmake
 - PyQt5
@@ -56,9 +57,6 @@ Navigate to the `age-gender/age-and-gender` directory:
 cd ~/Documents/age-gender/age-and-gender
 ```
 Install required Python packages:
-```bash
-pip install wheel numpy face_recognition opencv-python-headless
-```
 ```bash
 python setup.py install
 ```
