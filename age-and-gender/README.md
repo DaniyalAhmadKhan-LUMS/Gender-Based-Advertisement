@@ -62,3 +62,30 @@ pip install wheel numpy face_recognition opencv-python-headless
 ```bash
 python setup.py install
 ```
+## Usage
+### Running the Inference Script:
+To run the gender detection, ensure you're in the correct directory and the `ageGen` environment is activated:
+```bash
+cd age-gender/age-and-gender/example
+```
+```bash
+python example_live.py
+```
+### Running the Video Player
+Open a separate terminal, activate the `ageGen` environment again, and navigate to the video player directory:
+```bash
+cd ~/Documents/age-gender/age-and-gender/video_player
+```
+```bash
+source ../../envs/ageGen/bin/activate
+```
+```bash
+python player.py
+```
+## Additional Notes
+* The project is set up to compile `OpenCV` with `GStreamer` and `CUDA` enabled, enhancing performance on the Jetson Nano.
+* The custom PyQt video player requires PyQt to be compiled from the source, following the provided installation instructions.
+* This setup is intended for users with a basic understanding of Linux-based systems and command-line interfaces.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
