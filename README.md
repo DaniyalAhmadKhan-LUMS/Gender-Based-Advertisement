@@ -19,7 +19,7 @@ This repository hosts a robust solution for real-time gender detection utilizing
     ```
 2. Clone the repository:
     ```bash
-    git clone https://github.com/DaniyalAhmadKhan-LUMS/age-gender.git
+   https://github.com/DaniyalAhmadKhan-LUMS/Gender-Based-Advertisement.git
     ```
 3. Create a Python virtual environment and activate it:
     ```bash
@@ -52,9 +52,9 @@ Ensure you are in the Documents folder or navigate back using `cd ~/Documents`.
     ```
 
 ### Install Project Dependencies
-Navigate to the `age-gender/age-and-gender` directory:
+Navigate to the `Gender-Based-Advertisement/age-and-gender` directory:
 ```bash
-cd ~/Documents/age-gender/age-and-gender
+cd ~/Documents/Gender-Based-Advertisement/age-and-gender
 ```
 Install required Python packages:
 ```bash
@@ -64,7 +64,7 @@ python setup.py install
 ### Running the Inference Script:
 To run the gender detection, ensure you're in the correct directory and the `ageGen` environment is activated:
 ```bash
-cd age-gender/age-and-gender/example
+cd Gender-Based-Advertisement/age-and-gender/example
 ```
 ```bash
 python example_live.py
@@ -72,7 +72,7 @@ python example_live.py
 ### Running the Video Player
 Open a separate terminal, activate the `ageGen` environment again, and navigate to the video player directory:
 ```bash
-cd ~/Documents/age-gender/age-and-gender/video_player
+cd ~/Documents/Gender-Based-Advertisement/age-and-gender/video_player
 ```
 ```bash
 source ../../envs/ageGen/bin/activate
