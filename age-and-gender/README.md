@@ -6,7 +6,7 @@ This repository hosts a robust solution for real-time gender detection utilizing
 ## Installation
 
 ### Prerequisites
-- Base Image: ```bash https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image ```
+- Base Image: `https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image`
 - Python 3.9
 - cmake
 - PyQt5
